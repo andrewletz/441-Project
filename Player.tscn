@@ -78,7 +78,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 2 ]
 }
 
-[node name="Player" type="KinematicBody" index="0"]
+[node name="Player" type="KinematicBody"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.379421, 0 )
 input_ray_pickable = true
