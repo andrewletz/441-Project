@@ -62,7 +62,7 @@ extents = Vector3( 1, 1, 1 )
 
 extents = Vector3( 0.392737, 0.875527, 0.163019 )
 
-[node name="Tree1" type="Spatial" index="0"]
+[node name="Tree2" type="Spatial"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.221472, 0 )
 _sections_unfolded = [ "Transform" ]

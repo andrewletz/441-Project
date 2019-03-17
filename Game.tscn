@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Tileset.meshlib" type="MeshLibrary" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Camera.gd" type="Script" id=3]
-[ext_resource path="res://treescns/Tree1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://treescns/Tree2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://treescns/Tree2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://treescns/Tree1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://treescns/Tree3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://treescns/Tree4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://treescns/Tree5.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Environment" id=1]
 
@@ -14,7 +17,7 @@ background_color = Color( 0.183594, 0.183594, 0.183594, 1 )
 background_energy = 1.0
 background_canvas_max_layer = 0
 ambient_light_color = Color( 0.841141, 0.845668, 0.957031, 1 )
-ambient_light_energy = 1.0
+ambient_light_energy = 0.8
 ambient_light_sky_contribution = 1.0
 fog_enabled = false
 fog_color = Color( 0.5, 0.6, 0.7, 1 )
@@ -83,9 +86,9 @@ adjustment_enabled = false
 adjustment_brightness = 1.0
 adjustment_contrast = 1.0
 adjustment_saturation = 1.0
-_sections_unfolded = [ "Ambient Light", "Background" ]
+_sections_unfolded = [ "Ambient Light", "Background", "Fog" ]
 
-[node name="Spatial" type="Spatial"]
+[node name="Spatial" type="Spatial" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -105,7 +108,7 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 0, 0, 1, 1, 0, 655361, 2, 0, 537526276, 3, 0, 655364, 4, 0, 655364, 5, 0, 0, 6, 0, 536870914, 7, 0, 537919490, 65528, 0, 536870914, 65529, 0, 1048578, 65530, 0, 1048578, 65531, 0, 1048578, 65532, 0, 655360, 65533, 0, 1048576, 65534, 0, 1048580, 65535, 0, 1441793, 0, 1, 655361, 1, 1, 0, 2, 1, 2, 3, 1, 655360, 4, 1, 1048576, 5, 1, 2, 6, 1, 537919490, 7, 1, 537919490, 65528, 1, 1048578, 65529, 1, 537526274, 65530, 1, 1048578, 65531, 1, 537919490, 65532, 1, 1441792, 65533, 1, 536870912, 65534, 1, 1441792, 65535, 1, 1048577, 0, 2, 1441796, 1, 2, 538312706, 2, 2, 1441794, 3, 2, 1441792, 4, 2, 0, 5, 2, 2, 6, 2, 655362, 7, 2, 1048578, 65528, 2, 655362, 65529, 2, 1441794, 65530, 2, 1048578, 65531, 2, 537919490, 65532, 2, 537919490, 65533, 2, 1048578, 65534, 2, 1441794, 65535, 2, 1048580, 0, 3, 1441796, 1, 3, 655360, 2, 3, 537919488, 3, 3, 1441794, 4, 3, 536870914, 5, 3, 2, 6, 3, 1441794, 7, 3, 537919490, 65528, 3, 537526274, 65529, 3, 2, 65530, 3, 1048578, 65531, 3, 1048578, 65532, 3, 536870914, 65533, 3, 655360, 65534, 3, 1048576, 65535, 3, 537919492, 0, 4, 1441793, 1, 4, 1441792, 2, 4, 0, 3, 4, 1441794, 4, 4, 655362, 5, 4, 1048578, 6, 4, 536870914, 7, 4, 1048578, 65528, 4, 537526274, 65529, 4, 1048578, 65530, 4, 1048578, 65531, 4, 2, 65532, 4, 1441794, 65533, 4, 1441792, 65534, 4, 0, 65535, 4, 1, 0, 5, 1441794, 1, 5, 655362, 2, 5, 1048578, 3, 5, 2, 4, 5, 1441794, 5, 5, 655362, 6, 5, 1048578, 7, 5, 1048578, 65528, 5, 1441794, 65529, 5, 655362, 65530, 5, 1048578, 65531, 5, 2, 65532, 5, 655362, 65533, 5, 1441794, 65534, 5, 1048578, 65535, 5, 536870914, 0, 6, 1048578, 1, 6, 2, 2, 6, 1441794, 3, 6, 655362, 4, 6, 1048578, 5, 6, 2, 6, 6, 1441794, 7, 6, 655362, 65528, 6, 2, 65529, 6, 1048578, 65530, 6, 655362, 65531, 6, 655362, 65532, 6, 1048578, 65533, 6, 2, 65534, 6, 1441794, 65535, 6, 1048578, 0, 65529, 1048578, 1, 65529, 1048578, 2, 65529, 537919490, 3, 65529, 1048578, 4, 65529, 1048578, 5, 65529, 1048578, 6, 65529, 1048578, 7, 65529, 1048578, 65528, 65529, 537919490, 65529, 65529, 1048578, 65530, 65529, 1048578, 65531, 65529, 1048578, 65532, 65529, 1048578, 65533, 65529, 1048578, 65534, 65529, 1048578, 65535, 65529, 537919490, 0, 65530, 655362, 1, 65530, 1048578, 2, 65530, 537919490, 3, 65530, 536870914, 4, 65530, 655362, 5, 65530, 1441794, 6, 65530, 537919490, 7, 65530, 1048578, 65528, 65530, 655362, 65529, 65530, 2, 65530, 65530, 1441794, 65531, 65530, 655362, 65532, 65530, 1048578, 65533, 65530, 2, 65534, 65530, 1441794, 65535, 65530, 1441794, 0, 65531, 655365, 1, 65531, 1048576, 2, 65531, 1048578, 3, 65531, 2, 4, 65531, 1441794, 5, 65531, 655362, 6, 65531, 655362, 7, 65531, 537919490, 65528, 65531, 1441794, 65529, 65531, 536870914, 65530, 65531, 1048578, 65531, 65531, 537919490, 65532, 65531, 537919490, 65533, 65531, 1048578, 65534, 65531, 537919490, 65535, 65531, 655360, 0, 65532, 3, 1, 65532, 1441796, 2, 65532, 2, 3, 65532, 655362, 4, 65532, 537526274, 5, 65532, 1441794, 6, 65532, 1048578, 7, 65532, 1048578, 65528, 65532, 2, 65529, 65532, 538312706, 65530, 65532, 1048578, 65531, 65532, 1048578, 65532, 65532, 1441794, 65533, 65532, 2, 65534, 65532, 655362, 65535, 65532, 1441797, 0, 65533, 1048577, 1, 65533, 1441793, 2, 65533, 4, 3, 65533, 4, 4, 65533, 4, 5, 65533, 1048576, 6, 65533, 2, 7, 65533, 1048578, 65528, 65533, 1048578, 65529, 65533, 1048578, 65530, 65533, 1048578, 65531, 65533, 1048578, 65532, 65533, 537919490, 65533, 65533, 655362, 65534, 65533, 1048578, 65535, 65533, 1441792, 0, 65534, 1, 1, 65534, 655361, 2, 65534, 655364, 3, 65534, 655364, 4, 65534, 1048577, 5, 65534, 1441796, 6, 65534, 655362, 7, 65534, 1048578, 65528, 65534, 655362, 65529, 65534, 1441794, 65530, 65534, 1048578, 65531, 65534, 655360, 65532, 65534, 655365, 65533, 65534, 655365, 65534, 65534, 655365, 65535, 65534, 655365, 0, 65535, 1048577, 1, 65535, 1441793, 2, 65535, 4, 3, 65535, 4, 4, 65535, -536870911, 5, 65535, 1441796, 6, 65535, 1441794, 7, 65535, 1048578, 65528, 65535, 1441794, 65529, 65535, 655362, 65530, 65535, 1048578, 65531, 65535, 1441792, 65532, 65535, 655364, 65533, 65535, 655364, 65534, 65535, 1048577, 65535, 65535, 655361 )
+"cells": PoolIntArray( 0, 0, 1, 1, 0, 655361, 2, 0, 655364, 3, 0, 655364, 4, 0, 655364, 5, 0, 0, 6, 0, 2, 7, 0, 1048578, 8, 0, 1441794, 9, 0, -1609957374, 65526, 0, 655362, 65527, 0, -1609957374, 65528, 0, 2, 65529, 0, 1048578, 65530, 0, 1048578, 65531, 0, 1048578, 65532, 0, 655360, 65533, 0, 1048576, 65534, 0, 1048580, 65535, 0, 1441793, 0, 1, 655361, 1, 1, 0, 2, 1, 2, 3, 1, 655360, 4, 1, 1048576, 5, 1, 2, 6, 1, 1048578, 7, 1, 1048578, 8, 1, 655362, 9, 1, -1609170942, 65526, 1, -1610612734, 65527, 1, 1441794, 65528, 1, 1048578, 65529, 1, 655362, 65530, 1, 1048578, 65531, 1, 1048578, 65532, 1, 1441792, 65533, 1, 0, 65534, 1, 1441792, 65535, 1, 1048577, 0, 2, 1441796, 1, 2, 1441794, 2, 2, 1441794, 3, 2, 1441792, 4, 2, 0, 5, 2, 2, 6, 2, 655362, 7, 2, 1048578, 8, 2, -1609564158, 9, 2, 536870914, 65526, 2, 1048578, 65527, 2, -1610612734, 65528, 2, 655362, 65529, 2, 1441794, 65530, 2, 1048578, 65531, 2, 1048578, 65532, 2, 1048578, 65533, 2, 1048578, 65534, 2, 1441794, 65535, 2, 1048580, 0, 3, 1441796, 1, 3, 655360, 2, 3, 1048576, 3, 3, 1441794, 4, 3, 2, 5, 3, 2, 6, 3, 1441794, 7, 3, 1048578, 8, 3, -1610612734, 9, 3, -1609564158, 65526, 3, 1441794, 65527, 3, 1048578, 65528, 3, 655362, 65529, 3, 2, 65530, 3, 1048578, 65531, 3, 1048578, 65532, 3, 2, 65533, 3, 655360, 65534, 3, 1048576, 65535, 3, 1048580, 0, 4, 1441793, 1, 4, 1441792, 2, 4, 0, 3, 4, 1441794, 4, 4, 655362, 5, 4, 1048578, 6, 4, 2, 7, 4, 1048578, 8, 4, -1609170942, 9, 4, 655362, 65526, 4, 655362, 65527, 4, 655362, 65528, 4, 655362, 65529, 4, 1074790402, 65530, 4, 1048578, 65531, 4, 2, 65532, 4, 1441794, 65533, 4, 1441792, 65534, 4, 0, 65535, 4, 1, 0, 5, 1441794, 1, 5, 655362, 2, 5, 1048578, 3, 5, 2, 4, 5, 1441794, 5, 5, 655362, 6, 5, 1048578, 7, 5, 1048578, 8, 5, -1609957374, 9, 5, -1609170942, 65526, 5, 1048578, 65527, 5, 1441794, 65528, 5, 1441794, 65529, 5, 655362, 65530, 5, 1048578, 65531, 5, 2, 65532, 5, 655362, 65533, 5, 1441794, 65534, 5, 1048578, 65535, 5, 2, 0, 6, 1048578, 1, 6, 2, 2, 6, 1441794, 3, 6, 655362, 4, 6, 1048578, 5, 6, 2, 6, 6, 1441794, 7, 6, 655362, 8, 6, -1609564158, 9, 6, 1073741826, 65526, 6, 2, 65527, 6, 2, 65528, 6, 2, 65529, 6, 1048578, 65530, 6, 655362, 65531, 6, 655362, 65532, 6, 1048578, 65533, 6, 2, 65534, 6, 1441794, 65535, 6, 1048578, 0, 7, -1610612734, 1, 7, 1048578, 2, 7, 1441794, 3, 7, 655362, 4, 7, 537919490, 5, 7, 2, 6, 7, -1610612734, 7, 7, 1441794, 8, 7, 655362, 9, 7, 1048578, 65526, 7, 655362, 65527, 7, 1441794, 65528, 7, -1609564158, 65529, 7, 2, 65530, 7, 1441794, 65531, 7, 537526274, 65532, 7, 537919490, 65533, 7, -1610612734, 65534, 7, 1441794, 65535, 7, -1609957374, 0, 65528, 1048578, 1, 65528, -1609957374, 2, 65528, -1609170942, 3, 65528, 2, 4, 65528, -1609564158, 5, 65528, 655362, 6, 65528, 1441794, 7, 65528, 2, 8, 65528, 537919490, 9, 65528, 655362, 65526, 65528, -1609564158, 65527, 65528, 655362, 65528, 65528, 1441794, 65529, 65528, -1610612734, 65530, 65528, -1610612734, 65531, 65528, -1610612734, 65532, 65528, 1048578, 65533, 65528, 655362, 65534, 65528, 538312706, 65535, 65528, -1610612734, 0, 65529, 1048578, 1, 65529, 1048578, 2, 65529, 1048578, 3, 65529, 1048578, 4, 65529, 1048578, 5, 65529, 1048578, 6, 65529, 1048578, 7, 65529, 1048578, 8, 65529, -1609957374, 9, 65529, -1609170942, 65526, 65529, 2, 65527, 65529, 1441794, 65528, 65529, 1048578, 65529, 65529, 1048578, 65530, 65529, 1048578, 65531, 65529, 1048578, 65532, 65529, 1048578, 65533, 65529, 1048578, 65534, 65529, 1048578, 65535, 65529, 1048578, 0, 65530, 537526274, 1, 65530, 1048578, 2, 65530, 1048578, 3, 65530, 2, 4, 65530, 655362, 5, 65530, 1441794, 6, 65530, 1048578, 7, 65530, 1048578, 8, 65530, 1048578, 9, 65530, 2, 65526, 65530, 1441794, 65527, 65530, -1610612734, 65528, 65530, 655362, 65529, 65530, 2, 65530, 65530, 1441794, 65531, 65530, 1074397186, 65532, 65530, 1048578, 65533, 65530, 2, 65534, 65530, 1441794, 65535, 65530, 1441794, 0, 65531, 655365, 1, 65531, 1048576, 2, 65531, 1048578, 3, 65531, 2, 4, 65531, 1441794, 5, 65531, 655362, 6, 65531, 655362, 7, 65531, 1048578, 8, 65531, -1610612734, 9, 65531, 1048578, 65526, 65531, 537526274, 65527, 65531, -1609564158, 65528, 65531, 1441794, 65529, 65531, 536870914, 65530, 65531, 1048578, 65531, 65531, 1048578, 65532, 65531, 1048578, 65533, 65531, 1048578, 65534, 65531, 1048578, 65535, 65531, 655360, 0, 65532, 3, 1, 65532, 1441796, 2, 65532, 2, 3, 65532, 655362, 4, 65532, 655362, 5, 65532, 1441794, 6, 65532, 1048578, 7, 65532, 1048578, 8, 65532, -1609170942, 9, 65532, -1609170942, 65526, 65532, -1609564158, 65527, 65532, 655362, 65528, 65532, 2, 65529, 65532, 1441794, 65530, 65532, 1048578, 65531, 65532, 1048578, 65532, 65532, 1441794, 65533, 65532, 2, 65534, 65532, 655362, 65535, 65532, 1441797, 0, 65533, 1048577, 1, 65533, 1441793, 2, 65533, 4, 3, 65533, 4, 4, 65533, 4, 5, 65533, 1048576, 6, 65533, 2, 7, 65533, 1048578, 8, 65533, -1609957374, 9, 65533, 655362, 65526, 65533, 1048578, 65527, 65533, -1609170942, 65528, 65533, 1048578, 65529, 65533, 1048578, 65530, 65533, 1048578, 65531, 65533, 1048578, 65532, 65533, 1048578, 65533, 65533, 655362, 65534, 65533, 1048578, 65535, 65533, 1441792, 0, 65534, 1, 1, 65534, 655361, 2, 65534, 655364, 3, 65534, 655364, 4, 65534, 1048577, 5, 65534, 1441796, 6, 65534, 655362, 7, 65534, 1048578, 8, 65534, 1048578, 9, 65534, -1610612734, 65526, 65534, 2, 65527, 65534, -1610612734, 65528, 65534, 655362, 65529, 65534, 1441794, 65530, 65534, 1048578, 65531, 65534, 655360, 65532, 65534, 655365, 65533, 65534, 655365, 65534, 65534, 655365, 65535, 65534, 655365, 0, 65535, 1048577, 1, 65535, 1441793, 2, 65535, 4, 3, 65535, 4, 4, 65535, 1, 5, 65535, 1441796, 6, 65535, 1441794, 7, 65535, 1048578, 8, 65535, 2, 9, 65535, -1609564158, 65526, 65535, 1441794, 65527, 65535, -1609564158, 65528, 65535, 1441794, 65529, 65535, 655362, 65530, 65535, 1048578, 65531, 65535, 1441792, 65532, 65535, 655364, 65533, 65535, 655364, 65534, 65535, 1048577, 65535, 65535, 655361 )
 }
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
@@ -135,22 +138,2974 @@ far = 100.0
 script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="OmniLight" type="OmniLight" parent="Player" index="3"]
+
+transform = Transform( 0.0164838, 0, 0, 0, 0.94642, -0.114907, 0, -0.114907, 0.753583, 0, 0.00216603, 0.00464526 )
+visible = false
+layers = 1
+light_color = Color( 0.597656, 0.597656, 0.597656, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = true
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 5.0
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light", "Shadow" ]
+
 [node name="Trees" type="Node" parent="." index="3"]
 
-[node name="Tree1" parent="Trees" index="0" instance=ExtResource( 4 )]
+[node name="Glob Bundle" type="Node" parent="Trees" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.48961, 0.138519, 0 )
+editor/display_folded = true
 
-[node name="Tree2" parent="Trees" index="1" instance=ExtResource( 4 )]
+[node name="Bundle 1" type="Spatial" parent="Trees/Glob Bundle" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.7394, 0.138519, 0.5 )
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1351, 0, 4.5 )
 
-[node name="Tree3" parent="Trees" index="2" instance=ExtResource( 4 )]
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 1" index="0" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.76419, 0.138519, 1.98211 )
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
 
-[node name="Tree4" parent="Trees" index="3" instance=ExtResource( 5 )]
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 1" index="1" instance=ExtResource( 4 )]
 
-transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 2.5, 0.221472, 0 )
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 1" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 1" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 1" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 88" type="Spatial" parent="Trees/Glob Bundle" index="1"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.40519, 0, -14.6743 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 88" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 88" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 88" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 88" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 88" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 89" type="Spatial" parent="Trees/Glob Bundle" index="2"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.32509, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 89" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 89" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 89" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 89" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 89" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 90" type="Spatial" parent="Trees/Glob Bundle" index="3"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.15553, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 90" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 90" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 90" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 90" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 90" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 91" type="Spatial" parent="Trees/Glob Bundle" index="4"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.278442, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 91" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 91" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 91" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 91" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 91" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 92" type="Spatial" parent="Trees/Glob Bundle" index="5"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.77556, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 92" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 92" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 92" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 92" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 92" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 93" type="Spatial" parent="Trees/Glob Bundle" index="6"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00152, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 93" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 93" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 93" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 93" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 93" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 94" type="Spatial" parent="Trees/Glob Bundle" index="7"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2909, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 94" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 94" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 94" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 94" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 94" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 95" type="Spatial" parent="Trees/Glob Bundle" index="8"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5786, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 95" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 95" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 95" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 95" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 95" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 96" type="Spatial" parent="Trees/Glob Bundle" index="9"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9316, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 96" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 96" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 96" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 96" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 96" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 97" type="Spatial" parent="Trees/Glob Bundle" index="10"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9934, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 97" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 97" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 97" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 97" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 97" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 98" type="Spatial" parent="Trees/Glob Bundle" index="11"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.769, 0, -15.1682 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 98" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 98" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 98" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 98" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 98" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 99" type="Spatial" parent="Trees/Glob Bundle" index="12"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.769, 0, -12.3083 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 99" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 99" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 99" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 99" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 99" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 100" type="Spatial" parent="Trees/Glob Bundle" index="13"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4097, 0, -7.40098 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 100" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 100" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 100" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 100" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 100" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 46" type="Spatial" parent="Trees/Glob Bundle" index="14"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1351, 0, 13 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 46" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 46" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 46" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 46" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 46" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 47" type="Spatial" parent="Trees/Glob Bundle" index="15"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75698, 0, 13 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 47" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 47" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 47" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 47" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 47" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 48" type="Spatial" parent="Trees/Glob Bundle" index="16"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.39271, 0, 13 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 48" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 48" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 48" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 48" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 48" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 49" type="Spatial" parent="Trees/Glob Bundle" index="17"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07067, 0, 13 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 49" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 49" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 49" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 49" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 49" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 50" type="Spatial" parent="Trees/Glob Bundle" index="18"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38194, 0, 13 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 50" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 50" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 50" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 50" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 50" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 51" type="Spatial" parent="Trees/Glob Bundle" index="19"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.65075, 0, 13 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 51" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 51" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 51" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 51" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 51" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 52" type="Spatial" parent="Trees/Glob Bundle" index="20"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.07845, 0, 13 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 52" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 52" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 52" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 52" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 52" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 53" type="Spatial" parent="Trees/Glob Bundle" index="21"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4299, 0, 13 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 53" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 53" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 53" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 53" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 53" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 2" type="Spatial" parent="Trees/Glob Bundle" index="22"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0756, 0, 6.70464 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 2" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 2" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 2" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 2" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 2" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 3" type="Spatial" parent="Trees/Glob Bundle" index="23"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1678, 0, 8.6612 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 3" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 3" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 3" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 3" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 3" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 4" type="Spatial" parent="Trees/Glob Bundle" index="24"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0126, 0, 10.3491 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 4" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 4" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 4" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 4" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 4" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 5" type="Spatial" parent="Trees/Glob Bundle" index="25"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.31896, 0, 11.7096 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 5" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 5" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 5" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 5" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 5" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 6" type="Spatial" parent="Trees/Glob Bundle" index="26"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0651, 0, 11.7762 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 6" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 6" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 6" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 6" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 6" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 7" type="Spatial" parent="Trees/Glob Bundle" index="27"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.639801, 0, 12.13 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 7" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 7" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 7" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 7" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 7" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 8" type="Spatial" parent="Trees/Glob Bundle" index="28"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.74461, 0, 11.7557 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 8" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 8" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 8" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 8" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 8" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 9" type="Spatial" parent="Trees/Glob Bundle" index="29"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1929, 0, 10.0729 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 9" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 9" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 9" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 9" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 9" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 10" type="Spatial" parent="Trees/Glob Bundle" index="30"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1929, 0, 11.4377 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 10" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 10" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 10" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 10" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 10" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 11" type="Spatial" parent="Trees/Glob Bundle" index="31"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.52683, 0, 9.02241 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 11" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 11" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 11" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 11" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 11" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 12" type="Spatial" parent="Trees/Glob Bundle" index="32"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.09197, 0, 10.5623 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 12" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 12" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 12" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 12" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 12" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 13" type="Spatial" parent="Trees/Glob Bundle" index="33"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1987, 0, 10.5623 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 13" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 13" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 13" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 13" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 13" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 54" type="Spatial" parent="Trees/Glob Bundle" index="34"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5799, 0, 12.8278 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 54" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 54" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 54" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 54" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 54" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 55" type="Spatial" parent="Trees/Glob Bundle" index="35"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7446, 0, 12.8278 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 55" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 55" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 55" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 55" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 55" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 17" type="Spatial" parent="Trees/Glob Bundle" index="36"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1987, 0, 4.06229 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 17" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 17" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 17" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 17" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 17" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 19" type="Spatial" parent="Trees/Glob Bundle" index="37"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1987, 0, -2.24364 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 19" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 19" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 19" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 19" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 19" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 23" type="Spatial" parent="Trees/Glob Bundle" index="38"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1987, 0, -9.18479 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 23" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 23" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 23" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 23" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 23" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 25" type="Spatial" parent="Trees/Glob Bundle" index="39"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.77496, 0, -11.7963 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 25" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 25" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 25" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 25" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 25" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 28" type="Spatial" parent="Trees/Glob Bundle" index="40"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1188, 0, -12.6448 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 28" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 28" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 28" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 28" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 28" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 31" type="Spatial" parent="Trees/Glob Bundle" index="41"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.574961, 0, -12.6448 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 31" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 31" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 31" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 31" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 31" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 36" type="Spatial" parent="Trees/Glob Bundle" index="42"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.01283, 0, -12.6448 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 36" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 36" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 36" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 36" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 36" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 39" type="Spatial" parent="Trees/Glob Bundle" index="43"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1446, 0, -12.6448 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 39" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 39" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 39" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 39" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 39" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 42" type="Spatial" parent="Trees/Glob Bundle" index="44"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0207, 0, -9.08497 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 42" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 42" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 42" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 42" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 42" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 44" type="Spatial" parent="Trees/Glob Bundle" index="45"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.59668, 0, -9.92978 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 44" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 44" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 44" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 44" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 44" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 14" type="Spatial" parent="Trees/Glob Bundle" index="46"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1139, 0, 9.81652 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 14" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 14" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 14" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 14" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 14" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 18" type="Spatial" parent="Trees/Glob Bundle" index="47"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1139, 0, 3.31652 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 18" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 18" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 18" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 18" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 18" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 20" type="Spatial" parent="Trees/Glob Bundle" index="48"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1139, 0, -2.98941 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 20" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 20" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 20" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 20" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 20" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 24" type="Spatial" parent="Trees/Glob Bundle" index="49"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1139, 0, -9.93056 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 24" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 24" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 24" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 24" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 24" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 26" type="Spatial" parent="Trees/Glob Bundle" index="50"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.69011, 0, -12.542 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 26" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 26" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 26" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 26" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 26" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 29" type="Spatial" parent="Trees/Glob Bundle" index="51"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0339, 0, -13.3905 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 29" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 29" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 29" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 29" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 29" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 32" type="Spatial" parent="Trees/Glob Bundle" index="52"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34019, 0, -13.3905 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 32" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 32" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 32" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 32" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 32" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 35" type="Spatial" parent="Trees/Glob Bundle" index="53"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.09767, 0, -13.3905 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 35" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 35" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 35" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 35" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 35" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 38" type="Spatial" parent="Trees/Glob Bundle" index="54"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2295, 0, -13.3905 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 38" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 38" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 38" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 38" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 38" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 40" type="Spatial" parent="Trees/Glob Bundle" index="55"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1056, 0, -9.83075 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 40" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 40" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 40" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 40" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 40" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 45" type="Spatial" parent="Trees/Glob Bundle" index="56"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.68153, 0, -10.6756 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 45" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 45" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 45" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 45" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 45" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 15" type="Spatial" parent="Trees/Glob Bundle" index="57"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4769, 0, 11.5326 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 15" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 15" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 15" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 15" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 15" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 16" type="Spatial" parent="Trees/Glob Bundle" index="58"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4769, 0, 5.0326 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 16" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 16" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 16" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 16" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 16" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 58" type="Spatial" parent="Trees/Glob Bundle" index="59"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3359, 0, 1.5326 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 58" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 58" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 58" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 58" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 58" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 61" type="Spatial" parent="Trees/Glob Bundle" index="60"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8967, 0, -1.07923 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 61" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 61" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 61" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 61" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 61" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 64" type="Spatial" parent="Trees/Glob Bundle" index="61"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8591, 0, -6.38553 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 64" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 64" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 64" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 64" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 64" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 67" type="Spatial" parent="Trees/Glob Bundle" index="62"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.24483, 0, -10.4104 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 67" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 67" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 67" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 67" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 67" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 70" type="Spatial" parent="Trees/Glob Bundle" index="63"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1659, 0, 11.2155 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 70" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 70" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 70" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 70" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 70" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 74" type="Spatial" parent="Trees/Glob Bundle" index="64"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2814, 0, 7.48739 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 74" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 74" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 74" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 74" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 74" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 78" type="Spatial" parent="Trees/Glob Bundle" index="65"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5582, 0, 4.54813 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 78" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 78" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 78" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 78" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 78" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 80" type="Spatial" parent="Trees/Glob Bundle" index="66"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9974, -1.90735e-006, 1.21649 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 80" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 80" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 80" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 80" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 80" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 84" type="Spatial" parent="Trees/Glob Bundle" index="67"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9974, -1.90735e-006, -2.12538 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 84" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 84" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 84" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 84" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 84" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 87" type="Spatial" parent="Trees/Glob Bundle" index="68"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9974, -1.90735e-006, -5.65582 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 87" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 87" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 87" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 87" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 87" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 56" type="Spatial" parent="Trees/Glob Bundle" index="69"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2475, 0, 6.53219 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 56" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 56" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 56" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 56" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 56" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 59" type="Spatial" parent="Trees/Glob Bundle" index="70"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1066, 0, 3.03219 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 59" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 59" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 59" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 59" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 59" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 63" type="Spatial" parent="Trees/Glob Bundle" index="71"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6674, 0, 0.420365 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 63" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 63" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 63" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 63" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 63" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 66" type="Spatial" parent="Trees/Glob Bundle" index="72"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6298, 0, -4.88594 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 66" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 66" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 66" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 66" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 66" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 69" type="Spatial" parent="Trees/Glob Bundle" index="73"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0155, 0, -8.91082 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 69" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 69" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 69" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 69" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 69" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 71" type="Spatial" parent="Trees/Glob Bundle" index="74"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3953, 0, 12.7151 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 71" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 71" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 71" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 71" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 71" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 75" type="Spatial" parent="Trees/Glob Bundle" index="75"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5108, 0, 8.98698 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 75" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 75" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 75" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 75" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 75" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 76" type="Spatial" parent="Trees/Glob Bundle" index="76"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7876, 0, 6.04772 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 76" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 76" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 76" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 76" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 76" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 79" type="Spatial" parent="Trees/Glob Bundle" index="77"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2268, -1.90735e-006, 2.71608 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 79" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 79" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 79" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 79" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 79" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 83" type="Spatial" parent="Trees/Glob Bundle" index="78"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2268, -1.90735e-006, -0.625789 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 83" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 83" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 83" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 83" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 83" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 86" type="Spatial" parent="Trees/Glob Bundle" index="79"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2268, -1.90735e-006, -4.15623 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 86" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 86" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 86" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 86" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 86" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 57" type="Spatial" parent="Trees/Glob Bundle" index="80"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9429, 0, 5.82961 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 57" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 57" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 57" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 57" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 57" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 60" type="Spatial" parent="Trees/Glob Bundle" index="81"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.802, 0, 2.32961 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 60" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 60" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 60" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 60" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 60" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 62" type="Spatial" parent="Trees/Glob Bundle" index="82"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3628, 0, -0.28222 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 62" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 62" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 62" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 62" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 62" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 65" type="Spatial" parent="Trees/Glob Bundle" index="83"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3252, 0, -5.58852 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 65" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 65" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 65" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 65" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 65" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 68" type="Spatial" parent="Trees/Glob Bundle" index="84"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.71089, 0, -9.6134 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 68" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 68" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 68" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 68" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 68" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 72" type="Spatial" parent="Trees/Glob Bundle" index="85"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6999, 0, 12.0125 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 72" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 72" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 72" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 72" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 72" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 73" type="Spatial" parent="Trees/Glob Bundle" index="86"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8153, 0, 8.2844 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 73" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 73" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 73" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 73" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 73" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 77" type="Spatial" parent="Trees/Glob Bundle" index="87"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0922, 0, 5.34514 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 77" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 77" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 77" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 77" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 77" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 81" type="Spatial" parent="Trees/Glob Bundle" index="88"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5313, -1.90735e-006, 2.0135 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 81" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 81" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 81" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 81" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 81" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 82" type="Spatial" parent="Trees/Glob Bundle" index="89"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5313, -1.90735e-006, -1.32837 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 82" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 82" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 82" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 82" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 82" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 85" type="Spatial" parent="Trees/Glob Bundle" index="90"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5313, -1.90735e-006, -4.85881 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 85" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 85" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 85" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 85" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 85" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 21" type="Spatial" parent="Trees/Glob Bundle" index="91"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4769, 0, -1.27333 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 21" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 21" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 21" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 21" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 21" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 22" type="Spatial" parent="Trees/Glob Bundle" index="92"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4769, 0, -8.21448 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 22" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 22" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 22" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 22" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 22" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 27" type="Spatial" parent="Trees/Glob Bundle" index="93"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.05309, 0, -10.8259 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 27" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 27" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 27" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 27" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 27" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 30" type="Spatial" parent="Trees/Glob Bundle" index="94"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3969, 0, -11.6745 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 30" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 30" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 30" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 30" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 30" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 33" type="Spatial" parent="Trees/Glob Bundle" index="95"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70317, 0, -11.6745 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 33" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 33" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 33" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 33" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 33" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 34" type="Spatial" parent="Trees/Glob Bundle" index="96"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7347, 0, -11.6745 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 34" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 34" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 34" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 34" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 34" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 37" type="Spatial" parent="Trees/Glob Bundle" index="97"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8665, 0, -11.6745 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 37" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 37" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 37" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 37" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 37" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 41" type="Spatial" parent="Trees/Glob Bundle" index="98"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7426, 0, -8.11466 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 41" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 41" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 41" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 41" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 41" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Bundle 43" type="Spatial" parent="Trees/Glob Bundle" index="99"]
+
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.31855, 0, -8.95947 )
+
+[node name="Pine18" parent="Trees/Glob Bundle/Bundle 43" index="0" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.06748, 0.145149, 0.797039 )
+
+[node name="Pine19" parent="Trees/Glob Bundle/Bundle 43" index="1" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.898471, 0.145149, -0.332026 )
+
+[node name="Monkey12" parent="Trees/Glob Bundle/Bundle 43" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.735807, 0.138519, -0.0178871 )
+
+[node name="Monkey13" parent="Trees/Glob Bundle/Bundle 43" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.07127, 0.138519, 0.842618 )
+
+[node name="Alba13" parent="Trees/Glob Bundle/Bundle 43" index="4" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.050992, 0.108996, 0.564981 )
+
+[node name="Monkey" parent="Trees" index="1" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.7642, 0.138519, -2.51789 )
+
+[node name="Monkey2" parent="Trees" index="2" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.3803, 0.138519, 2.29481 )
+
+[node name="Monkey3" parent="Trees" index="3" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.40005, 0.138519, 3.43007 )
+
+[node name="Monkey4" parent="Trees" index="4" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -7.41951, 0.138519, 7.86182 )
+
+[node name="Monkey5" parent="Trees" index="5" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.00269, 0.138519, 10.4814 )
+
+[node name="Monkey6" parent="Trees" index="6" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.514646, 0.138519, 11.8216 )
+
+[node name="Monkey8" parent="Trees" index="7" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -7.88459, 0.138519, 10.8076 )
+
+[node name="Monkey9" parent="Trees" index="8" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -6.59872, 0.138519, 11.3955 )
+
+[node name="Monkey7" parent="Trees" index="9" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.19922, 0.138519, 11.4022 )
+
+[node name="Monkey10" parent="Trees" index="10" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -8.73541, 0.138519, 4.01564 )
+
+[node name="Monkey11" parent="Trees" index="11" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.49001, 0.138519, 5.01564 )
+
+[node name="Monkey12" parent="Trees" index="12" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 2.06431, 0.138519, 3.38974 )
+
+[node name="Monkey13" parent="Trees" index="13" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -7.89946, 0.138519, -2.99786 )
+
+[node name="Monkey14" parent="Trees" index="14" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -8.95076, 0.138519, -2.02521 )
+
+[node name="Monkey15" parent="Trees" index="15" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 5.6969, 0.138519, -2.31144 )
+
+[node name="Monkey16" parent="Trees" index="16" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 7.67675, 0.138519, -1.61275 )
+
+[node name="Pine" parent="Trees" index="17" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.5, 0.145149, 0.5 )
+
+[node name="Pine27" parent="Trees" index="18" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 6.53623, 0.145149, -1.25427 )
+
+[node name="Pine28" parent="Trees" index="19" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 5.36492, 0.14515, -1.71303 )
+
+[node name="Pine29" parent="Trees" index="20" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.33266, 0.14515, -2.0052 )
+
+[node name="Pine23" parent="Trees" index="21" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 3.18583, 0.145149, 2.28978 )
+
+[node name="Pine24" parent="Trees" index="22" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 3.18583, 0.145149, -2.82672 )
+
+[node name="Pine25" parent="Trees" index="23" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 9.70456, 0.145149, -4.95639 )
+
+[node name="Pine26" parent="Trees" index="24" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.827, 0.145149, -4.11814 )
+
+[node name="Pine2" parent="Trees" index="25" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.90114, 0.145149, 3.0129 )
+
+[node name="Pine17" parent="Trees" index="26" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -10.2006, 0.145149, 5.57156 )
+
+[node name="Pine3" parent="Trees" index="27" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.95128, 0.145149, 6.56106 )
+
+[node name="Pine4" parent="Trees" index="28" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -6.54333, 0.145149, 5.53523 )
+
+[node name="Pine5" parent="Trees" index="29" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -8.11801, 0.145149, 8.52537 )
+
+[node name="Pine6" parent="Trees" index="30" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.11801, 0.145149, 10.0254 )
+
+[node name="Pine7" parent="Trees" index="31" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.11801, 0.145149, 10.5254 )
+
+[node name="Pine8" parent="Trees" index="32" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.381991, 0.145149, 10.0254 )
+
+[node name="Pine9" parent="Trees" index="33" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.88199, 0.145149, 10.5254 )
+
+[node name="Pine10" parent="Trees" index="34" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.953965, 0.145149, 11.58 )
+
+[node name="Pine11" parent="Trees" index="35" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.15549, 0.145149, 11.58 )
+
+[node name="Pine12" parent="Trees" index="36" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 3.04576, 0.145149, 9.76484 )
+
+[node name="Pine13" parent="Trees" index="37" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.19089, 0.145149, 11.2996 )
+
+[node name="Pine14" parent="Trees" index="38" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -6.69089, 0.145149, 10.1898 )
+
+[node name="Pine15" parent="Trees" index="39" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -7.81258, 0.145149, 9.61827 )
+
+[node name="Pine16" parent="Trees" index="40" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.01961, 0.145149, 9.52802 )
+
+[node name="Pine18" parent="Trees" index="41" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 13.482, 0.145149, 7.37794 )
+
+[node name="Pine19" parent="Trees" index="42" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 12.4183, 0.145149, 8.21873 )
+
+[node name="Pine20" parent="Trees" index="43" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 14.5873, 0.145149, 8.21873 )
+
+[node name="Pine21" parent="Trees" index="44" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 13.429, 0.145149, 8.88532 )
+
+[node name="Pine22" parent="Trees" index="45" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 16.0248, 0.145149, 8.34592 )
+
+[node name="Alba" parent="Trees" index="46" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.4122, 0.108996, -0.815587 )
+
+[node name="Alba18" parent="Trees" index="47" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.8127, 0.108996, 0.199971 )
+
+[node name="Alba19" parent="Trees" index="48" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 9.84535, 0.108996, 0.831719 )
+
+[node name="Alba20" parent="Trees" index="49" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.0417552, 0.108996, -4.82422 )
+
+[node name="Alba21" parent="Trees" index="50" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 3.04872, 0.108996, -7.62427 )
+
+[node name="Alba11" parent="Trees" index="51" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.11538, 0.108996, 2.55682 )
+
+[node name="Alba12" parent="Trees" index="52" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.60649, 0.108996, 0.936984 )
+
+[node name="Alba2" parent="Trees" index="53" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.44398, 0.108996, 5.68783 )
+
+[node name="Alba3" parent="Trees" index="54" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 2.88518, 0.108996, 11.2276 )
+
+[node name="Alba4" parent="Trees" index="55" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.3732, 0.108996, 10.1465 )
+
+[node name="Alba5" parent="Trees" index="56" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -4.61633, 0.108996, 10.3482 )
+
+[node name="Alba6" parent="Trees" index="57" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.67089, 0.108996, 11.6037 )
+
+[node name="Alba7" parent="Trees" index="58" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -6.04781, 0.108996, 10.9686 )
+
+[node name="Alba8" parent="Trees" index="59" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.68445, 0.108996, 7.5383 )
+
+[node name="Alba9" parent="Trees" index="60" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.11106, 0.108996, 8.63902 )
+
+[node name="Alba10" parent="Trees" index="61" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -10.0871, 0.108996, 8.22698 )
+
+[node name="Alba13" parent="Trees" index="62" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.9631, 0.108996, 7.05316 )
+
+[node name="Alba14" parent="Trees" index="63" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.2345, 0.108996, 8.13016 )
+
+[node name="Alba15" parent="Trees" index="64" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.2345, 0.108996, 9.08521 )
+
+[node name="Alba16" parent="Trees" index="65" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 11.2106, 0.108996, 9.08521 )
+
+[node name="Alba17" parent="Trees" index="66" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 12.3336, 0.108996, 7.34908 )
+
+[node name="Alba22" parent="Trees" index="67" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.95826, 0.108996, 4.20019 )
+
+[node name="Alba23" parent="Trees" index="68" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 2.12743, 0.108996, 6.5735 )
+
+[node name="Alba24" parent="Trees" index="69" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 6.3302, 0.108996, -5.71591 )
+
+[node name="Alba25" parent="Trees" index="70" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.93453, 0.108996, -5.71591 )
+
+[node name="Alba26" parent="Trees" index="71" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -11.0993, 0.108996, -2.21694 )
+
+[node name="Alba27" parent="Trees" index="72" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.98752, 0.108996, -3.52179 )
+
+[node name="Alba28" parent="Trees" index="73" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.51984, 0.108996, -1.31878 )
+
+[node name="Cedar" parent="Trees" index="74" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.3396, 0.119507, 2.32372 )
+
+[node name="Cedar2" parent="Trees" index="75" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -7.57442, 0.119507, 2.86785 )
+
+[node name="Cedar8" parent="Trees" index="76" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -14.3073, 0.119507, 10.6314 )
+
+[node name="Cedar9" parent="Trees" index="77" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.5553, 0.119507, 10.2542 )
+
+[node name="Cedar10" parent="Trees" index="78" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -13.6737, 0.119507, 11.3766 )
+
+[node name="Cedar11" parent="Trees" index="79" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.7096, 0.119507, 11.0379 )
+
+[node name="Cedar3" parent="Trees" index="80" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -8.40244, 0.119507, 1.60671 )
+
+[node name="Cedar12" parent="Trees" index="81" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -4.4957, 0.119507, -5.89421 )
+
+[node name="Cedar13" parent="Trees" index="82" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.1154, 0.119507, -5.35781 )
+
+[node name="Cedar14" parent="Trees" index="83" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -4.26346, 0.119507, -4.7688 )
+
+[node name="Cedar15" parent="Trees" index="84" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -6.90756, 0.119507, -5.9741 )
+
+[node name="Cedar16" parent="Trees" index="85" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -7.52251, 0.119507, -5.38126 )
+
+[node name="Cedar17" parent="Trees" index="86" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.55925, 0.119507, -7.18075 )
+
+[node name="Cedar18" parent="Trees" index="87" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -4.51263, 0.119507, -6.83621 )
+
+[node name="Cedar4" parent="Trees" index="88" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.97298, 0.119507, 8.9977 )
+
+[node name="Cedar5" parent="Trees" index="89" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.35291, 0.119507, 8.4921 )
+
+[node name="Cedar6" parent="Trees" index="90" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 2.00017, 0.119507, 9.33953 )
+
+[node name="Cedar7" parent="Trees" index="91" instance=ExtResource( 7 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.82697, 0.119507, 9.02593 )
+
+[node name="Lebanon" parent="Trees" index="92" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.5, 0.157371, -5 )
+
+[node name="Lebanon8" parent="Trees" index="93" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.29385, 0.157371, -12.5042 )
+
+[node name="Lebanon9" parent="Trees" index="94" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.17797, 0.157371, -13.128 )
+
+[node name="Lebanon10" parent="Trees" index="95" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.72434, 0.157371, -13.128 )
+
+[node name="Lebanon11" parent="Trees" index="96" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 16.4766, 0.157371, -11.4082 )
+
+[node name="Lebanon2" parent="Trees" index="97" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.9401, 0.157371, 1.95033 )
+
+[node name="Lebanon12" parent="Trees" index="98" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.35836, 0.157371, -6.46249 )
+
+[node name="Lebanon13" parent="Trees" index="99" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.93831, 0.157371, -5.28706 )
+
+[node name="Lebanon3" parent="Trees" index="100" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.9622, 0.157371, 8.02958 )
+
+[node name="Lebanon4" parent="Trees" index="101" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.08269, 0.157371, 8.02958 )
+
+[node name="Lebanon5" parent="Trees" index="102" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 8.06226, 0.157371, 3.8346 )
+
+[node name="Lebanon6" parent="Trees" index="103" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.1338, 0.157371, 12.3623 )
+
+[node name="Lebanon7" parent="Trees" index="104" instance=ExtResource( 8 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 11.4939, 0.157371, 11.2095 )
+
+[node name="OmniLight" type="OmniLight" parent="." index="4"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.912719, 0.967947, 7 )
+visible = false
+layers = 1
+light_color = Color( 1, 0.977356, 0.792969, 1 )
+light_energy = 1.2
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 1.3
+omni_attenuation = 0.870551
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light", "Omni" ]
 
 
