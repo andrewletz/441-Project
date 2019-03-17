@@ -1,10 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Tiles.meshlib" type="MeshLibrary" id=1]
 [ext_resource path="res://art/trees/monkey-puzzle.png" type="Texture" id=2]
-[ext_resource path="res://art/grass.png" type="Texture" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://art/filler.png" type="Texture" id=5]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -53,7 +51,6 @@ params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
-albedo_texture = ExtResource( 3 )
 metallic = 0.0
 metallic_specular = 0.5
 metallic_texture_channel = 0
@@ -85,7 +82,7 @@ _sections_unfolded = [ "Albedo", "Flags", "Parameters" ]
 [sub_resource type="SpriteFrames" id=5]
 
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -157,7 +154,7 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 1, 0, -1610612736, 2, 0, 0, 3, 0, 0, 1, 65534, 0, 2, 65534, -1610612736, 3, 65534, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0 )
+"cells": PoolIntArray( 1, 0, -1610612736, 2, 0, 0, 3, 0, 0, 1, 65534, -1610612736, 2, 65534, 0, 3, 65534, 0, 1, 65535, 1073741824, 2, 65535, 0, 3, 65535, 0 )
 }
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
@@ -294,7 +291,6 @@ spot_range = 5.0
 spot_attenuation = 1.0
 spot_angle = 55.1193
 spot_angle_attenuation = 1.0
-_sections_unfolded = [ "Light", "Shadow" ]
 
 [node name="Camera" type="Camera" parent="." index="7"]
 
@@ -363,7 +359,7 @@ transparent = true
 shaded = true
 double_sided = true
 alpha_cut = 0
-texture = ExtResource( 5 )
+texture = null
 vframes = 1
 hframes = 1
 frame = 0

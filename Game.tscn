@@ -17,12 +17,12 @@ background_color = Color( 0.183594, 0.183594, 0.183594, 1 )
 background_energy = 1.0
 background_canvas_max_layer = 0
 ambient_light_color = Color( 0.841141, 0.845668, 0.957031, 1 )
-ambient_light_energy = 0.8
+ambient_light_energy = 1.0
 ambient_light_sky_contribution = 1.0
 fog_enabled = false
 fog_color = Color( 0.5, 0.6, 0.7, 1 )
-fog_sun_color = Color( 1, 0.9, 0.7, 1 )
-fog_sun_amount = 0.0
+fog_sun_color = Color( 1, 1, 1, 1 )
+fog_sun_amount = 1.0
 fog_depth_enabled = true
 fog_depth_begin = 10.0
 fog_depth_curve = 1.0
@@ -108,7 +108,7 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 0, 0, 1, 1, 0, 655361, 2, 0, 655364, 3, 0, 655364, 4, 0, 655364, 5, 0, 0, 6, 0, 2, 7, 0, 1048578, 8, 0, 1441794, 9, 0, -1609957374, 65526, 0, 655362, 65527, 0, -1609957374, 65528, 0, 2, 65529, 0, 1048578, 65530, 0, 1048578, 65531, 0, 1048578, 65532, 0, 655360, 65533, 0, 1048576, 65534, 0, 1048580, 65535, 0, 1441793, 0, 1, 655361, 1, 1, 0, 2, 1, 2, 3, 1, 655360, 4, 1, 1048576, 5, 1, 2, 6, 1, 1048578, 7, 1, 1048578, 8, 1, 655362, 9, 1, -1609170942, 65526, 1, -1610612734, 65527, 1, 1441794, 65528, 1, 1048578, 65529, 1, 655362, 65530, 1, 1048578, 65531, 1, 1048578, 65532, 1, 1441792, 65533, 1, 0, 65534, 1, 1441792, 65535, 1, 1048577, 0, 2, 1441796, 1, 2, 1441794, 2, 2, 1441794, 3, 2, 1441792, 4, 2, 0, 5, 2, 2, 6, 2, 655362, 7, 2, 1048578, 8, 2, -1609564158, 9, 2, 536870914, 65526, 2, 1048578, 65527, 2, -1610612734, 65528, 2, 655362, 65529, 2, 1441794, 65530, 2, 1048578, 65531, 2, 1048578, 65532, 2, 1048578, 65533, 2, 1048578, 65534, 2, 1441794, 65535, 2, 1048580, 0, 3, 1441796, 1, 3, 655360, 2, 3, 1048576, 3, 3, 1441794, 4, 3, 2, 5, 3, 2, 6, 3, 1441794, 7, 3, 1048578, 8, 3, -1610612734, 9, 3, -1609564158, 65526, 3, 1441794, 65527, 3, 1048578, 65528, 3, 655362, 65529, 3, 2, 65530, 3, 1048578, 65531, 3, 1048578, 65532, 3, 2, 65533, 3, 655360, 65534, 3, 1048576, 65535, 3, 1048580, 0, 4, 1441793, 1, 4, 1441792, 2, 4, 0, 3, 4, 1441794, 4, 4, 655362, 5, 4, 1048578, 6, 4, 2, 7, 4, 1048578, 8, 4, -1609170942, 9, 4, 655362, 65526, 4, 655362, 65527, 4, 655362, 65528, 4, 655362, 65529, 4, 1074790402, 65530, 4, 1048578, 65531, 4, 2, 65532, 4, 1441794, 65533, 4, 1441792, 65534, 4, 0, 65535, 4, 1, 0, 5, 1441794, 1, 5, 655362, 2, 5, 1048578, 3, 5, 2, 4, 5, 1441794, 5, 5, 655362, 6, 5, 1048578, 7, 5, 1048578, 8, 5, -1609957374, 9, 5, -1609170942, 65526, 5, 1048578, 65527, 5, 1441794, 65528, 5, 1441794, 65529, 5, 655362, 65530, 5, 1048578, 65531, 5, 2, 65532, 5, 655362, 65533, 5, 1441794, 65534, 5, 1048578, 65535, 5, 2, 0, 6, 1048578, 1, 6, 2, 2, 6, 1441794, 3, 6, 655362, 4, 6, 1048578, 5, 6, 2, 6, 6, 1441794, 7, 6, 655362, 8, 6, -1609564158, 9, 6, 1073741826, 65526, 6, 2, 65527, 6, 2, 65528, 6, 2, 65529, 6, 1048578, 65530, 6, 655362, 65531, 6, 655362, 65532, 6, 1048578, 65533, 6, 2, 65534, 6, 1441794, 65535, 6, 1048578, 0, 7, -1610612734, 1, 7, 1048578, 2, 7, 1441794, 3, 7, 655362, 4, 7, 537919490, 5, 7, 2, 6, 7, -1610612734, 7, 7, 1441794, 8, 7, 655362, 9, 7, 1048578, 65526, 7, 655362, 65527, 7, 1441794, 65528, 7, -1609564158, 65529, 7, 2, 65530, 7, 1441794, 65531, 7, 537526274, 65532, 7, 537919490, 65533, 7, -1610612734, 65534, 7, 1441794, 65535, 7, -1609957374, 0, 65528, 1048578, 1, 65528, -1609957374, 2, 65528, -1609170942, 3, 65528, 2, 4, 65528, -1609564158, 5, 65528, 655362, 6, 65528, 1441794, 7, 65528, 2, 8, 65528, 537919490, 9, 65528, 655362, 65526, 65528, -1609564158, 65527, 65528, 655362, 65528, 65528, 1441794, 65529, 65528, -1610612734, 65530, 65528, -1610612734, 65531, 65528, -1610612734, 65532, 65528, 1048578, 65533, 65528, 655362, 65534, 65528, 538312706, 65535, 65528, -1610612734, 0, 65529, 1048578, 1, 65529, 1048578, 2, 65529, 1048578, 3, 65529, 1048578, 4, 65529, 1048578, 5, 65529, 1048578, 6, 65529, 1048578, 7, 65529, 1048578, 8, 65529, -1609957374, 9, 65529, -1609170942, 65526, 65529, 2, 65527, 65529, 1441794, 65528, 65529, 1048578, 65529, 65529, 1048578, 65530, 65529, 1048578, 65531, 65529, 1048578, 65532, 65529, 1048578, 65533, 65529, 1048578, 65534, 65529, 1048578, 65535, 65529, 1048578, 0, 65530, 537526274, 1, 65530, 1048578, 2, 65530, 1048578, 3, 65530, 2, 4, 65530, 655362, 5, 65530, 1441794, 6, 65530, 1048578, 7, 65530, 1048578, 8, 65530, 1048578, 9, 65530, 2, 65526, 65530, 1441794, 65527, 65530, -1610612734, 65528, 65530, 655362, 65529, 65530, 2, 65530, 65530, 1441794, 65531, 65530, 1074397186, 65532, 65530, 1048578, 65533, 65530, 2, 65534, 65530, 1441794, 65535, 65530, 1441794, 0, 65531, 655365, 1, 65531, 1048576, 2, 65531, 1048578, 3, 65531, 2, 4, 65531, 1441794, 5, 65531, 655362, 6, 65531, 655362, 7, 65531, 1048578, 8, 65531, -1610612734, 9, 65531, 1048578, 65526, 65531, 537526274, 65527, 65531, -1609564158, 65528, 65531, 1441794, 65529, 65531, 536870914, 65530, 65531, 1048578, 65531, 65531, 1048578, 65532, 65531, 1048578, 65533, 65531, 1048578, 65534, 65531, 1048578, 65535, 65531, 655360, 0, 65532, 3, 1, 65532, 1441796, 2, 65532, 2, 3, 65532, 655362, 4, 65532, 655362, 5, 65532, 1441794, 6, 65532, 1048578, 7, 65532, 1048578, 8, 65532, -1609170942, 9, 65532, -1609170942, 65526, 65532, -1609564158, 65527, 65532, 655362, 65528, 65532, 2, 65529, 65532, 1441794, 65530, 65532, 1048578, 65531, 65532, 1048578, 65532, 65532, 1441794, 65533, 65532, 2, 65534, 65532, 655362, 65535, 65532, 1441797, 0, 65533, 1048577, 1, 65533, 1441793, 2, 65533, 4, 3, 65533, 4, 4, 65533, 4, 5, 65533, 1048576, 6, 65533, 2, 7, 65533, 1048578, 8, 65533, -1609957374, 9, 65533, 655362, 65526, 65533, 1048578, 65527, 65533, -1609170942, 65528, 65533, 1048578, 65529, 65533, 1048578, 65530, 65533, 1048578, 65531, 65533, 1048578, 65532, 65533, 1048578, 65533, 65533, 655362, 65534, 65533, 1048578, 65535, 65533, 1441792, 0, 65534, 1, 1, 65534, 655361, 2, 65534, 655364, 3, 65534, 655364, 4, 65534, 1048577, 5, 65534, 1441796, 6, 65534, 655362, 7, 65534, 1048578, 8, 65534, 1048578, 9, 65534, -1610612734, 65526, 65534, 2, 65527, 65534, -1610612734, 65528, 65534, 655362, 65529, 65534, 1441794, 65530, 65534, 1048578, 65531, 65534, 655360, 65532, 65534, 655365, 65533, 65534, 655365, 65534, 65534, 655365, 65535, 65534, 655365, 0, 65535, 1048577, 1, 65535, 1441793, 2, 65535, 4, 3, 65535, 4, 4, 65535, 1, 5, 65535, 1441796, 6, 65535, 1441794, 7, 65535, 1048578, 8, 65535, 2, 9, 65535, -1609564158, 65526, 65535, 1441794, 65527, 65535, -1609564158, 65528, 65535, 1441794, 65529, 65535, 655362, 65530, 65535, 1048578, 65531, 65535, 1441792, 65532, 65535, 655364, 65533, 65535, 655364, 65534, 65535, 1048577, 65535, 65535, 655361 )
+"cells": PoolIntArray( 0, 0, 1, 1, 0, 655361, 2, 0, 655364, 3, 0, 655364, 4, 0, 655364, 5, 0, 0, 6, 0, 2, 7, 0, 1048578, 8, 0, 1441794, 9, 0, 655362, 65526, 0, 655362, 65527, 0, 655362, 65528, 0, 2, 65529, 0, 1048578, 65530, 0, 1048578, 65531, 0, 1048578, 65532, 0, 655360, 65533, 0, 1048576, 65534, 0, 1048580, 65535, 0, 1441793, 0, 1, 655361, 1, 1, 0, 2, 1, 2, 3, 1, 537526272, 4, 1, 1048576, 5, 1, 2, 6, 1, 1048578, 7, 1, 1048578, 8, 1, 655362, 9, 1, 538312706, 65526, 1, 2, 65527, 1, 1441794, 65528, 1, 1048578, 65529, 1, 655362, 65530, 1, 1048578, 65531, 1, 1048578, 65532, 1, 1441792, 65533, 1, 0, 65534, 1, 1441792, 65535, 1, 1048577, 0, 2, 1441796, 1, 2, 1441794, 2, 2, 1441794, 3, 2, 1441792, 4, 2, 0, 5, 2, 536870914, 6, 2, 655362, 7, 2, 1048578, 8, 2, 1048578, 9, 2, 2, 65526, 2, 1048578, 65527, 2, 2, 65528, 2, 655362, 65529, 2, 1441794, 65530, 2, 1048578, 65531, 2, 1048578, 65532, 2, 1048578, 65533, 2, 1048578, 65534, 2, 1441794, 65535, 2, 1048580, 0, 3, 1441796, 1, 3, 655360, 2, 3, 1048576, 3, 3, 1441794, 4, 3, 2, 5, 3, 2, 6, 3, 1441794, 7, 3, 1048578, 8, 3, 2, 9, 3, 1048578, 65526, 3, 1441794, 65527, 3, 1048578, 65528, 3, 655362, 65529, 3, 2, 65530, 3, 1048578, 65531, 3, 1048578, 65532, 3, 2, 65533, 3, 655360, 65534, 3, 1048576, 65535, 3, 1048580, 0, 4, 1441793, 1, 4, 1441792, 2, 4, 0, 3, 4, 1441794, 4, 4, 655362, 5, 4, 1048578, 6, 4, 2, 7, 4, 1048578, 8, 4, 1441794, 9, 4, 655362, 65526, 4, 655362, 65527, 4, 655362, 65528, 4, 655362, 65529, 4, 1048578, 65530, 4, 1048578, 65531, 4, 2, 65532, 4, 1441794, 65533, 4, 1441792, 65534, 4, 0, 65535, 4, 1, 0, 5, 1441794, 1, 5, 655362, 2, 5, 1048578, 3, 5, 2, 4, 5, 1441794, 5, 5, 655362, 6, 5, 1048578, 7, 5, 1048578, 8, 5, 655362, 9, 5, 1441794, 65526, 5, 1048578, 65527, 5, 1441794, 65528, 5, 1441794, 65529, 5, 655362, 65530, 5, 1048578, 65531, 5, 2, 65532, 5, 655362, 65533, 5, 1441794, 65534, 5, 1048578, 65535, 5, 2, 0, 6, 1048578, 1, 6, 2, 2, 6, 1441794, 3, 6, 655362, 4, 6, 1048578, 5, 6, 2, 6, 6, 1441794, 7, 6, 655362, 8, 6, 1048578, 9, 6, 2, 65526, 6, 2, 65527, 6, 2, 65528, 6, 2, 65529, 6, 1048578, 65530, 6, 655362, 65531, 6, 655362, 65532, 6, 1048578, 65533, 6, 2, 65534, 6, 1441794, 65535, 6, 1048578, 0, 7, 2, 1, 7, 1048578, 2, 7, 1441794, 3, 7, 655362, 4, 7, 1048578, 5, 7, 2, 6, 7, 2, 7, 7, 1441794, 8, 7, 655362, 9, 7, 1048578, 65526, 7, 655362, 65527, 7, 1441794, 65528, 7, 1048578, 65529, 7, 2, 65530, 7, 1441794, 65531, 7, 655362, 65532, 7, 1048578, 65533, 7, 2, 65534, 7, 1441794, 65535, 7, 655362, 0, 65528, 1048578, 1, 65528, 655362, 2, 65528, 1441794, 3, 65528, 2, 4, 65528, 1048578, 5, 65528, 655362, 6, 65528, 1441794, 7, 65528, 2, 8, 65528, 1048578, 9, 65528, 655362, 65526, 65528, 1048578, 65527, 65528, 655362, 65528, 65528, 1441794, 65529, 65528, 2, 65530, 65528, 2, 65531, 65528, 2, 65532, 65528, 1048578, 65533, 65528, 655362, 65534, 65528, 1441794, 65535, 65528, 2, 0, 65529, 1048578, 1, 65529, 1048578, 2, 65529, 1048578, 3, 65529, 1048578, 4, 65529, 1048578, 5, 65529, 1048578, 6, 65529, 1048578, 7, 65529, 1048578, 8, 65529, 655362, 9, 65529, 1441794, 65526, 65529, 2, 65527, 65529, 1441794, 65528, 65529, 1074790402, 65529, 65529, 1048578, 65530, 65529, 1048578, 65531, 65529, 1048578, 65532, 65529, 1048578, 65533, 65529, 1048578, 65534, 65529, 1048578, 65535, 65529, 1048578, 0, 65530, 655362, 1, 65530, 1048578, 2, 65530, 1048578, 3, 65530, 2, 4, 65530, 655362, 5, 65530, 1441794, 6, 65530, 1048578, 7, 65530, 1048578, 8, 65530, 1048578, 9, 65530, 2, 65526, 65530, 1441794, 65527, 65530, 2, 65528, 65530, 655362, 65529, 65530, 2, 65530, 65530, 1441794, 65531, 65530, 655362, 65532, 65530, 1048578, 65533, 65530, 2, 65534, 65530, 1441794, 65535, 65530, 1441794, 0, 65531, 655365, 1, 65531, 1048576, 2, 65531, 1048578, 3, 65531, 2, 4, 65531, 1441794, 5, 65531, 655362, 6, 65531, 655362, 7, 65531, 1048578, 8, 65531, 2, 9, 65531, 1048578, 65526, 65531, 655362, 65527, 65531, 1048578, 65528, 65531, 1441794, 65529, 65531, 2, 65530, 65531, 1048578, 65531, 65531, 1048578, 65532, 65531, 1048578, 65533, 65531, 1048578, 65534, 65531, 1048578, 65535, 65531, 655360, 0, 65532, 3, 1, 65532, 1441796, 2, 65532, 2, 3, 65532, 655362, 4, 65532, 655362, 5, 65532, 1441794, 6, 65532, 1048578, 7, 65532, 1048578, 8, 65532, 1441794, 9, 65532, 1441794, 65526, 65532, 1048578, 65527, 65532, 655362, 65528, 65532, 2, 65529, 65532, 1441794, 65530, 65532, 1048578, 65531, 65532, 1048578, 65532, 65532, 1441794, 65533, 65532, 2, 65534, 65532, 655362, 65535, 65532, 1441797, 0, 65533, 1048577, 1, 65533, 1441793, 2, 65533, 4, 3, 65533, 4, 4, 65533, 4, 5, 65533, 1048576, 6, 65533, 2, 7, 65533, 1048578, 8, 65533, 655362, 9, 65533, 655362, 65526, 65533, 1048578, 65527, 65533, 1441794, 65528, 65533, 1048578, 65529, 65533, 1048578, 65530, 65533, 1048578, 65531, 65533, 1048578, 65532, 65533, 1048578, 65533, 65533, 655362, 65534, 65533, 1048578, 65535, 65533, 1441792, 0, 65534, 1, 1, 65534, 655361, 2, 65534, 655364, 3, 65534, 655364, 4, 65534, 1048577, 5, 65534, 1441796, 6, 65534, 655362, 7, 65534, 1048578, 8, 65534, 1048578, 9, 65534, 2, 65526, 65534, 2, 65527, 65534, 2, 65528, 65534, 655362, 65529, 65534, 1441794, 65530, 65534, 1048578, 65531, 65534, 655360, 65532, 65534, 655365, 65533, 65534, 655365, 65534, 65534, 655365, 65535, 65534, 655365, 0, 65535, 1048577, 1, 65535, 1441793, 2, 65535, 4, 3, 65535, 4, 4, 65535, 1, 5, 65535, 1441796, 6, 65535, 1441794, 7, 65535, 1074790402, 8, 65535, 1073741826, 9, 65535, 1048578, 65526, 65535, 1075183618, 65527, 65535, 1048578, 65528, 65535, 1075183618, 65529, 65535, 1074397186, 65530, 65535, 1074790402, 65531, 65535, 1075183616, 65532, 65535, 655364, 65533, 65535, 1074397188, 65534, 65535, 1074790401, 65535, 65535, 655361 )
 }
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
@@ -141,7 +141,6 @@ _sections_unfolded = [ "Transform" ]
 [node name="OmniLight" type="OmniLight" parent="Player" index="3"]
 
 transform = Transform( 0.0164838, 0, 0, 0, 0.94642, -0.114907, 0, -0.114907, 0.753583, 0, 0.00216603, 0.00464526 )
-visible = false
 layers = 1
 light_color = Color( 0.597656, 0.597656, 0.597656, 1 )
 light_energy = 1.0
@@ -164,9 +163,9 @@ _sections_unfolded = [ "Light", "Shadow" ]
 
 [node name="Trees" type="Node" parent="." index="3"]
 
-[node name="Glob Bundle" type="Node" parent="Trees" index="0"]
-
 editor/display_folded = true
+
+[node name="Glob Bundle" type="Node" parent="Trees" index="0"]
 
 [node name="Bundle 1" type="Spatial" parent="Trees/Glob Bundle" index="0"]
 
@@ -2732,355 +2731,375 @@ transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 5
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 7.67675, 0.138519, -1.61275 )
 
-[node name="Pine" parent="Trees" index="17" instance=ExtResource( 4 )]
+[node name="Monkey17" parent="Trees" index="17" instance=ExtResource( 5 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.579777, 0.118892, -0.592914 )
+
+[node name="Pine" parent="Trees" index="18" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.5, 0.145149, 0.5 )
 
-[node name="Pine27" parent="Trees" index="18" instance=ExtResource( 4 )]
+[node name="Pine30" parent="Trees" index="19" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.70357, 0.145149, -0.445432 )
+
+[node name="Pine31" parent="Trees" index="20" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.948815, 0.145149, 0.487926 )
+
+[node name="Pine27" parent="Trees" index="21" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 6.53623, 0.145149, -1.25427 )
 
-[node name="Pine28" parent="Trees" index="19" instance=ExtResource( 4 )]
+[node name="Pine28" parent="Trees" index="22" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 5.36492, 0.14515, -1.71303 )
 
-[node name="Pine29" parent="Trees" index="20" instance=ExtResource( 4 )]
+[node name="Pine29" parent="Trees" index="23" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.33266, 0.14515, -2.0052 )
 
-[node name="Pine23" parent="Trees" index="21" instance=ExtResource( 4 )]
+[node name="Pine23" parent="Trees" index="24" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 3.18583, 0.145149, 2.28978 )
 
-[node name="Pine24" parent="Trees" index="22" instance=ExtResource( 4 )]
+[node name="Pine24" parent="Trees" index="25" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 3.18583, 0.145149, -2.82672 )
 
-[node name="Pine25" parent="Trees" index="23" instance=ExtResource( 4 )]
+[node name="Pine25" parent="Trees" index="26" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 9.70456, 0.145149, -4.95639 )
 
-[node name="Pine26" parent="Trees" index="24" instance=ExtResource( 4 )]
+[node name="Pine26" parent="Trees" index="27" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.827, 0.145149, -4.11814 )
 
-[node name="Pine2" parent="Trees" index="25" instance=ExtResource( 4 )]
+[node name="Pine32" parent="Trees" index="28" instance=ExtResource( 4 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.0862062, 0.145149, -3.03991 )
+
+[node name="Pine2" parent="Trees" index="29" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.90114, 0.145149, 3.0129 )
 
-[node name="Pine17" parent="Trees" index="26" instance=ExtResource( 4 )]
+[node name="Pine17" parent="Trees" index="30" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -10.2006, 0.145149, 5.57156 )
 
-[node name="Pine3" parent="Trees" index="27" instance=ExtResource( 4 )]
+[node name="Pine3" parent="Trees" index="31" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.95128, 0.145149, 6.56106 )
 
-[node name="Pine4" parent="Trees" index="28" instance=ExtResource( 4 )]
+[node name="Pine4" parent="Trees" index="32" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -6.54333, 0.145149, 5.53523 )
 
-[node name="Pine5" parent="Trees" index="29" instance=ExtResource( 4 )]
+[node name="Pine5" parent="Trees" index="33" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -8.11801, 0.145149, 8.52537 )
 
-[node name="Pine6" parent="Trees" index="30" instance=ExtResource( 4 )]
+[node name="Pine6" parent="Trees" index="34" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.11801, 0.145149, 10.0254 )
 
-[node name="Pine7" parent="Trees" index="31" instance=ExtResource( 4 )]
+[node name="Pine7" parent="Trees" index="35" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.11801, 0.145149, 10.5254 )
 
-[node name="Pine8" parent="Trees" index="32" instance=ExtResource( 4 )]
+[node name="Pine8" parent="Trees" index="36" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.381991, 0.145149, 10.0254 )
 
-[node name="Pine9" parent="Trees" index="33" instance=ExtResource( 4 )]
+[node name="Pine9" parent="Trees" index="37" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 1.88199, 0.145149, 10.5254 )
 
-[node name="Pine10" parent="Trees" index="34" instance=ExtResource( 4 )]
+[node name="Pine10" parent="Trees" index="38" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.953965, 0.145149, 11.58 )
 
-[node name="Pine11" parent="Trees" index="35" instance=ExtResource( 4 )]
+[node name="Pine11" parent="Trees" index="39" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.15549, 0.145149, 11.58 )
 
-[node name="Pine12" parent="Trees" index="36" instance=ExtResource( 4 )]
+[node name="Pine12" parent="Trees" index="40" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 3.04576, 0.145149, 9.76484 )
 
-[node name="Pine13" parent="Trees" index="37" instance=ExtResource( 4 )]
+[node name="Pine13" parent="Trees" index="41" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.19089, 0.145149, 11.2996 )
 
-[node name="Pine14" parent="Trees" index="38" instance=ExtResource( 4 )]
+[node name="Pine14" parent="Trees" index="42" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -6.69089, 0.145149, 10.1898 )
 
-[node name="Pine15" parent="Trees" index="39" instance=ExtResource( 4 )]
+[node name="Pine15" parent="Trees" index="43" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -7.81258, 0.145149, 9.61827 )
 
-[node name="Pine16" parent="Trees" index="40" instance=ExtResource( 4 )]
+[node name="Pine16" parent="Trees" index="44" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.01961, 0.145149, 9.52802 )
 
-[node name="Pine18" parent="Trees" index="41" instance=ExtResource( 4 )]
+[node name="Pine18" parent="Trees" index="45" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 13.482, 0.145149, 7.37794 )
 
-[node name="Pine19" parent="Trees" index="42" instance=ExtResource( 4 )]
+[node name="Pine19" parent="Trees" index="46" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 12.4183, 0.145149, 8.21873 )
 
-[node name="Pine20" parent="Trees" index="43" instance=ExtResource( 4 )]
+[node name="Pine20" parent="Trees" index="47" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 14.5873, 0.145149, 8.21873 )
 
-[node name="Pine21" parent="Trees" index="44" instance=ExtResource( 4 )]
+[node name="Pine21" parent="Trees" index="48" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 13.429, 0.145149, 8.88532 )
 
-[node name="Pine22" parent="Trees" index="45" instance=ExtResource( 4 )]
+[node name="Pine22" parent="Trees" index="49" instance=ExtResource( 4 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 16.0248, 0.145149, 8.34592 )
 
-[node name="Alba" parent="Trees" index="46" instance=ExtResource( 6 )]
+[node name="Alba" parent="Trees" index="50" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.4122, 0.108996, -0.815587 )
 
-[node name="Alba18" parent="Trees" index="47" instance=ExtResource( 6 )]
+[node name="Alba29" parent="Trees" index="51" instance=ExtResource( 6 )]
+
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -0.532393, 0.108996, 0.407074 )
+
+[node name="Alba18" parent="Trees" index="52" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.8127, 0.108996, 0.199971 )
 
-[node name="Alba19" parent="Trees" index="48" instance=ExtResource( 6 )]
+[node name="Alba19" parent="Trees" index="53" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 9.84535, 0.108996, 0.831719 )
 
-[node name="Alba20" parent="Trees" index="49" instance=ExtResource( 6 )]
+[node name="Alba20" parent="Trees" index="54" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0.0417552, 0.108996, -4.82422 )
 
-[node name="Alba21" parent="Trees" index="50" instance=ExtResource( 6 )]
+[node name="Alba21" parent="Trees" index="55" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 3.04872, 0.108996, -7.62427 )
 
-[node name="Alba11" parent="Trees" index="51" instance=ExtResource( 6 )]
+[node name="Alba11" parent="Trees" index="56" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.11538, 0.108996, 2.55682 )
 
-[node name="Alba12" parent="Trees" index="52" instance=ExtResource( 6 )]
+[node name="Alba12" parent="Trees" index="57" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.60649, 0.108996, 0.936984 )
 
-[node name="Alba2" parent="Trees" index="53" instance=ExtResource( 6 )]
+[node name="Alba2" parent="Trees" index="58" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.44398, 0.108996, 5.68783 )
 
-[node name="Alba3" parent="Trees" index="54" instance=ExtResource( 6 )]
+[node name="Alba3" parent="Trees" index="59" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 2.88518, 0.108996, 11.2276 )
 
-[node name="Alba4" parent="Trees" index="55" instance=ExtResource( 6 )]
+[node name="Alba4" parent="Trees" index="60" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.3732, 0.108996, 10.1465 )
 
-[node name="Alba5" parent="Trees" index="56" instance=ExtResource( 6 )]
+[node name="Alba5" parent="Trees" index="61" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -4.61633, 0.108996, 10.3482 )
 
-[node name="Alba6" parent="Trees" index="57" instance=ExtResource( 6 )]
+[node name="Alba6" parent="Trees" index="62" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.67089, 0.108996, 11.6037 )
 
-[node name="Alba7" parent="Trees" index="58" instance=ExtResource( 6 )]
+[node name="Alba7" parent="Trees" index="63" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -6.04781, 0.108996, 10.9686 )
 
-[node name="Alba8" parent="Trees" index="59" instance=ExtResource( 6 )]
+[node name="Alba8" parent="Trees" index="64" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.68445, 0.108996, 7.5383 )
 
-[node name="Alba9" parent="Trees" index="60" instance=ExtResource( 6 )]
+[node name="Alba9" parent="Trees" index="65" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.11106, 0.108996, 8.63902 )
 
-[node name="Alba10" parent="Trees" index="61" instance=ExtResource( 6 )]
+[node name="Alba10" parent="Trees" index="66" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -10.0871, 0.108996, 8.22698 )
 
-[node name="Alba13" parent="Trees" index="62" instance=ExtResource( 6 )]
+[node name="Alba13" parent="Trees" index="67" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.9631, 0.108996, 7.05316 )
 
-[node name="Alba14" parent="Trees" index="63" instance=ExtResource( 6 )]
+[node name="Alba14" parent="Trees" index="68" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.2345, 0.108996, 8.13016 )
 
-[node name="Alba15" parent="Trees" index="64" instance=ExtResource( 6 )]
+[node name="Alba15" parent="Trees" index="69" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.2345, 0.108996, 9.08521 )
 
-[node name="Alba16" parent="Trees" index="65" instance=ExtResource( 6 )]
+[node name="Alba16" parent="Trees" index="70" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 11.2106, 0.108996, 9.08521 )
 
-[node name="Alba17" parent="Trees" index="66" instance=ExtResource( 6 )]
+[node name="Alba17" parent="Trees" index="71" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 12.3336, 0.108996, 7.34908 )
 
-[node name="Alba22" parent="Trees" index="67" instance=ExtResource( 6 )]
+[node name="Alba22" parent="Trees" index="72" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.95826, 0.108996, 4.20019 )
 
-[node name="Alba23" parent="Trees" index="68" instance=ExtResource( 6 )]
+[node name="Alba23" parent="Trees" index="73" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 2.12743, 0.108996, 6.5735 )
 
-[node name="Alba24" parent="Trees" index="69" instance=ExtResource( 6 )]
+[node name="Alba24" parent="Trees" index="74" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 6.3302, 0.108996, -5.71591 )
 
-[node name="Alba25" parent="Trees" index="70" instance=ExtResource( 6 )]
+[node name="Alba25" parent="Trees" index="75" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.93453, 0.108996, -5.71591 )
 
-[node name="Alba26" parent="Trees" index="71" instance=ExtResource( 6 )]
+[node name="Alba26" parent="Trees" index="76" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -11.0993, 0.108996, -2.21694 )
 
-[node name="Alba27" parent="Trees" index="72" instance=ExtResource( 6 )]
+[node name="Alba27" parent="Trees" index="77" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.98752, 0.108996, -3.52179 )
 
-[node name="Alba28" parent="Trees" index="73" instance=ExtResource( 6 )]
+[node name="Alba28" parent="Trees" index="78" instance=ExtResource( 6 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.51984, 0.108996, -1.31878 )
 
-[node name="Cedar" parent="Trees" index="74" instance=ExtResource( 7 )]
+[node name="Cedar" parent="Trees" index="79" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.3396, 0.119507, 2.32372 )
 
-[node name="Cedar2" parent="Trees" index="75" instance=ExtResource( 7 )]
+[node name="Cedar2" parent="Trees" index="80" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -7.57442, 0.119507, 2.86785 )
 
-[node name="Cedar8" parent="Trees" index="76" instance=ExtResource( 7 )]
+[node name="Cedar8" parent="Trees" index="81" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -14.3073, 0.119507, 10.6314 )
 
-[node name="Cedar9" parent="Trees" index="77" instance=ExtResource( 7 )]
+[node name="Cedar9" parent="Trees" index="82" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.5553, 0.119507, 10.2542 )
 
-[node name="Cedar10" parent="Trees" index="78" instance=ExtResource( 7 )]
+[node name="Cedar10" parent="Trees" index="83" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -13.6737, 0.119507, 11.3766 )
 
-[node name="Cedar11" parent="Trees" index="79" instance=ExtResource( 7 )]
+[node name="Cedar11" parent="Trees" index="84" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.7096, 0.119507, 11.0379 )
 
-[node name="Cedar3" parent="Trees" index="80" instance=ExtResource( 7 )]
+[node name="Cedar3" parent="Trees" index="85" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -8.40244, 0.119507, 1.60671 )
 
-[node name="Cedar12" parent="Trees" index="81" instance=ExtResource( 7 )]
+[node name="Cedar12" parent="Trees" index="86" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -4.4957, 0.119507, -5.89421 )
 
-[node name="Cedar13" parent="Trees" index="82" instance=ExtResource( 7 )]
+[node name="Cedar13" parent="Trees" index="87" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.1154, 0.119507, -5.35781 )
 
-[node name="Cedar14" parent="Trees" index="83" instance=ExtResource( 7 )]
+[node name="Cedar14" parent="Trees" index="88" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -4.26346, 0.119507, -4.7688 )
 
-[node name="Cedar15" parent="Trees" index="84" instance=ExtResource( 7 )]
+[node name="Cedar15" parent="Trees" index="89" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -6.90756, 0.119507, -5.9741 )
 
-[node name="Cedar16" parent="Trees" index="85" instance=ExtResource( 7 )]
+[node name="Cedar16" parent="Trees" index="90" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -7.52251, 0.119507, -5.38126 )
 
-[node name="Cedar17" parent="Trees" index="86" instance=ExtResource( 7 )]
+[node name="Cedar17" parent="Trees" index="91" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.55925, 0.119507, -7.18075 )
 
-[node name="Cedar18" parent="Trees" index="87" instance=ExtResource( 7 )]
+[node name="Cedar18" parent="Trees" index="92" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -4.51263, 0.119507, -6.83621 )
 
-[node name="Cedar4" parent="Trees" index="88" instance=ExtResource( 7 )]
+[node name="Cedar4" parent="Trees" index="93" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.97298, 0.119507, 8.9977 )
 
-[node name="Cedar5" parent="Trees" index="89" instance=ExtResource( 7 )]
+[node name="Cedar5" parent="Trees" index="94" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.35291, 0.119507, 8.4921 )
 
-[node name="Cedar6" parent="Trees" index="90" instance=ExtResource( 7 )]
+[node name="Cedar6" parent="Trees" index="95" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 2.00017, 0.119507, 9.33953 )
 
-[node name="Cedar7" parent="Trees" index="91" instance=ExtResource( 7 )]
+[node name="Cedar7" parent="Trees" index="96" instance=ExtResource( 7 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -1.82697, 0.119507, 9.02593 )
 
-[node name="Lebanon" parent="Trees" index="92" instance=ExtResource( 8 )]
+[node name="Lebanon" parent="Trees" index="97" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -12.5, 0.157371, -5 )
 
-[node name="Lebanon8" parent="Trees" index="93" instance=ExtResource( 8 )]
+[node name="Lebanon8" parent="Trees" index="98" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -9.29385, 0.157371, -12.5042 )
 
-[node name="Lebanon9" parent="Trees" index="94" instance=ExtResource( 8 )]
+[node name="Lebanon9" parent="Trees" index="99" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -2.17797, 0.157371, -13.128 )
 
-[node name="Lebanon10" parent="Trees" index="95" instance=ExtResource( 8 )]
+[node name="Lebanon10" parent="Trees" index="100" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.72434, 0.157371, -13.128 )
 
-[node name="Lebanon11" parent="Trees" index="96" instance=ExtResource( 8 )]
+[node name="Lebanon11" parent="Trees" index="101" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 16.4766, 0.157371, -11.4082 )
 
-[node name="Lebanon2" parent="Trees" index="97" instance=ExtResource( 8 )]
+[node name="Lebanon2" parent="Trees" index="102" instance=ExtResource( 8 )]
 
-transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.9401, 0.157371, 1.95033 )
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.84216, 0.157371, 1.95033 )
 
-[node name="Lebanon12" parent="Trees" index="98" instance=ExtResource( 8 )]
+[node name="Lebanon12" parent="Trees" index="103" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.35836, 0.157371, -6.46249 )
 
-[node name="Lebanon13" parent="Trees" index="99" instance=ExtResource( 8 )]
+[node name="Lebanon13" parent="Trees" index="104" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -5.93831, 0.157371, -5.28706 )
 
-[node name="Lebanon3" parent="Trees" index="100" instance=ExtResource( 8 )]
+[node name="Lebanon3" parent="Trees" index="105" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, -3.9622, 0.157371, 8.02958 )
 
-[node name="Lebanon4" parent="Trees" index="101" instance=ExtResource( 8 )]
+[node name="Lebanon4" parent="Trees" index="106" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 4.08269, 0.157371, 8.02958 )
 
-[node name="Lebanon5" parent="Trees" index="102" instance=ExtResource( 8 )]
+[node name="Lebanon5" parent="Trees" index="107" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 8.06226, 0.157371, 3.8346 )
 
-[node name="Lebanon6" parent="Trees" index="103" instance=ExtResource( 8 )]
+[node name="Lebanon6" parent="Trees" index="108" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 10.1338, 0.157371, 12.3623 )
 
-[node name="Lebanon7" parent="Trees" index="104" instance=ExtResource( 8 )]
+[node name="Lebanon7" parent="Trees" index="109" instance=ExtResource( 8 )]
 
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 11.4939, 0.157371, 11.2095 )
 
@@ -3107,5 +3126,34 @@ omni_attenuation = 0.870551
 omni_shadow_mode = 1
 omni_shadow_detail = 1
 _sections_unfolded = [ "Light", "Omni" ]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="5"]
+
+transform = Transform( 0.625697, 0.36252, -0.690711, 0.306796, 0.699733, 0.645174, 0.717202, -0.615591, 0.326601, -2, 9, 7.5 )
+visible = false
+layers = 1
+light_color = Color( 0.778442, 0.765625, 1, 1 )
+light_energy = 1.0
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.0
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+directional_shadow_mode = 2
+directional_shadow_split_1 = 0.1
+directional_shadow_split_2 = 0.2
+directional_shadow_split_3 = 0.5
+directional_shadow_blend_splits = false
+directional_shadow_normal_bias = 0.8
+directional_shadow_bias_split_scale = 0.25
+directional_shadow_depth_range = 0
+directional_shadow_max_distance = 200.0
+_sections_unfolded = [ "Light", "Shadow" ]
 
 
