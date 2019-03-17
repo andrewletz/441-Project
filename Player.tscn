@@ -12,7 +12,7 @@ extents = Vector3( 1, 1, 1 )
 
 render_priority = 0
 flags_transparent = true
-flags_unshaded = true
+flags_unshaded = false
 flags_vertex_lighting = false
 flags_no_depth_test = false
 flags_use_point_size = false
@@ -20,15 +20,15 @@ flags_world_triplanar = false
 flags_fixed_size = false
 flags_albedo_tex_force_srgb = false
 vertex_color_use_as_albedo = false
-vertex_color_is_srgb = false
+vertex_color_is_srgb = true
 params_diffuse_mode = 0
 params_specular_mode = 0
 params_blend_mode = 0
-params_cull_mode = 0
+params_cull_mode = 2
 params_depth_draw_mode = 0
 params_line_width = 1.0
 params_point_size = 1.0
-params_billboard_mode = 1
+params_billboard_mode = 0
 params_grow = false
 params_use_alpha_scissor = false
 albedo_color = Color( 1, 1, 1, 1 )
@@ -58,13 +58,14 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
+_sections_unfolded = [ "Flags" ]
 
 [sub_resource type="Animation" id=3]
 
 resource_name = "Walk"
-length = 0.8
+length = 0.6
 loop = true
-step = 0.2
+step = 0.15
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:anim_col")
 tracks/0/interp = 1
@@ -80,7 +81,7 @@ tracks/0/keys = {
 
 [node name="Player" type="KinematicBody"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.379421, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0293328, 0 )
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
@@ -93,10 +94,11 @@ axis_lock_angular_y = false
 axis_lock_angular_z = false
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
 
-transform = Transform( 0.22, 0, 0, 0, 0.422625, 0, 0, 0, 0.108, 0, 0, 0 )
+transform = Transform( 0.227054, 0, 0, 0, 0.342326, 0, 0, 0, 0.056072, 0, 0.318914, 0 )
 shape = SubResource( 1 )
 disabled = false
 
@@ -104,6 +106,7 @@ disabled = false
 "PassCamera",
 ]]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.355163, 0 )
 layers = 1
 material_override = SubResource( 2 )
 cast_shadow = 1
@@ -132,7 +135,7 @@ frame = 0
 region_enabled = false
 region_rect = Rect2( 0, 0, 0, 0 )
 script = ExtResource( 3 )
-_sections_unfolded = [ "Animation", "Geometry" ]
+_sections_unfolded = [ "Animation", "Geometry", "Transform" ]
 anim_col = 0
 anim_row = 0
 mouse_has_control = true

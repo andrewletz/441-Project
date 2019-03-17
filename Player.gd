@@ -2,7 +2,7 @@ extends KinematicBody
 
 var speed = 100
 var direction = Vector3()
-#var gravity = -9.8
+var gravity = -10
 var velocity = Vector3()
 
 func _ready():
@@ -62,12 +62,7 @@ func _physics_process(delta):
 		psprite.mouse_has_control = true
 		anim.stop(true) # stop animation
 	
-	#if velocity.y > 0:
-	#	gravity = -20
-	#else:
-	#	gravity = -30
-	
-	#velocity.y += gravity * delta
+	velocity.y += gravity * delta
 	velocity.x = direction.x
 	velocity.z = direction.z
 	
