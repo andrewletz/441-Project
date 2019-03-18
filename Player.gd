@@ -12,8 +12,13 @@ func _physics_process(delta):
 	var should_play = false
 	var psprite = $PlayerSprite
 	
+	var left = Input.is_action_pressed("ui_left") or Input.is_key_pressed(KEY_A)
+	var right =  Input.is_action_pressed("ui_right") or Input.is_key_pressed(KEY_D)
+	var up = Input.is_action_pressed("ui_up") or Input.is_key_pressed(KEY_W)
+	var down = Input.is_action_pressed("ui_down") or Input.is_key_pressed(KEY_S)
+	
 	direction = Vector3(0, 0, 0)
-	if Input.is_action_pressed("ui_left"):
+	if left:
 		should_play = true
 		psprite.mouse_has_control = false
 		psprite.anim_row = 2
@@ -21,7 +26,7 @@ func _physics_process(delta):
 		
 		direction.x -= 1
 		
-	if Input.is_action_pressed("ui_right"):
+	if right:
 		should_play = true
 		psprite.mouse_has_control = false
 		psprite.anim_row = 2
@@ -29,20 +34,20 @@ func _physics_process(delta):
 		
 		direction.x += 1
 		
-	if Input.is_action_pressed("ui_up"):
+	if up:
 		should_play = true
 		psprite.mouse_has_control = false
-		if Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_left"):
+		if right or left:
 			psprite.anim_row = 3
 		else:
 			psprite.anim_row = 4
 		
 		direction.z -= 1
 		
-	if Input.is_action_pressed("ui_down"):
+	if down:
 		should_play = true
 		psprite.mouse_has_control = false
-		if Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_left"):
+		if right or left:
 			psprite.anim_row = 1
 		else:
 			psprite.anim_row = 0
